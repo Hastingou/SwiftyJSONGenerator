@@ -127,7 +127,7 @@ struct SwiftyJSONModelFile: ModelFile, DefaultModelFileComponent {
                 return "if let items = json[\(constantName)].array { \(name) = items.map { $0.\(variableType)Value } }"
             }
         } else {
-            return "\(name) = json[\(constantName)].arrayValue.map { $0.\(variableType) }"
+            return "\(name) = json[\(constantName)].arrayValue.map { $0.\(variableType)Value }"
         }
     }
 
